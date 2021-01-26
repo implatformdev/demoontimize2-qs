@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.imatia.demoont1</groupId>
+    <artifactId>demoontimize2</artifactId>
+    <version>0.0.1</version>
+	</parent>
+
+	<artifactId>demoontimize2-boot</artifactId>
+  <name>${project.groupId}:${project.artifactId}</name>
+	<packaging>jar</packaging>
+
+	<properties>
+		<start-class>com.imatia.demoont1.boot.core.ServerApplication</start-class>
+		<spring-boot.repackage.skip>false</spring-boot.repackage.skip>
+	</properties>
+
+	<dependencies>
+		<dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>demoontimize2-api</artifactId>
+		</dependency>
+
+		<dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>demoontimize2-model</artifactId>
+		</dependency>
+		<dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>demoontimize2-ws</artifactId>
+		</dependency>
+
+		<dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>demoontimize2-frontend</artifactId>
+		</dependency>
+
+		<!-- Ontimize Boot -->
+		<dependency>
+			<groupId>com.ontimize.boot</groupId>
+			<artifactId>ontimize-boot-starter-jdbc</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.ontimize.boot</groupId>
+			<artifactId>ontimize-boot-starter-rest</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>${project.artifactId}</finalName>
+	</build>
+</project>
